@@ -1,7 +1,7 @@
 {
   "name": "vauxoo-theme",
   "displayName": "Vauxoo Theme",
-  "description": "Official Vauxoo dark theme — brand palette (Manual 2024-2025), flat design, Vauxoo red #AC0340 accents.",
+  "description": "Official Vauxoo themes — Dark, Light and Vakyro. Brand palette (Manual 2024-2025), flat design, Vauxoo red #AC0340 accents.",
   "version": "0.1.1",
   "publisher": "vauxoo",
   "license": "MIT",
@@ -33,6 +33,16 @@
         "label": "Vauxoo Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/vauxoo-dark-color-theme.json"
+      },
+      {
+        "label": "Vauxoo Light",
+        "uiTheme": "vs",
+        "path": "./themes/vauxoo-light-color-theme.json"
+      },
+      {
+        "label": "Vauxoo Vakyro",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vauxoo-vakyro-color-theme.json"
       }
     ]
   }
