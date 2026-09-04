@@ -2,6 +2,12 @@
 
 Dark VSCode theme built on the official [Vauxoo brand palette](https://www.vauxoo.com/assets) (Brand Manual 2024-2025).
 
+![Vauxoo Dark — editor](images/screenshot-editor.png)
+
+## Palette
+
+![Vauxoo brand palette](images/palette.png)
+
 ## Design
 
 - **Base**: Vauxoo black `#282C2F` / `#27282F`, elevated surfaces `#393B49`, text `#D6DAE0`.
