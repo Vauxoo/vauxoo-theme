@@ -4,6 +4,8 @@ Render: Chrome headless (qlmanage deforma el aspect ratio de los SVG).
 Uso: python3 mockup.py  (desde images/), luego render.sh
 """
 W, H = 1280, 800
+MX, MY = 80, 56          # margen exterior para la sombra
+OW, OH = W + 2*MX, H + MY + 100
 MONO = "SF Mono, Menlo, monospace"
 UI = "-apple-system, Helvetica, sans-serif"
 
@@ -80,8 +82,18 @@ def build(name, P):
         else:
             tree.append(T(64, yy, [(f, P["uifg"], n)], size=14, font=UI))
 
-    svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg">
-<rect width="{W}" height="{H}" rx="12" fill="{P["editor"]}"/>
+    shadow_op = 0.30 if name != "light" else 0.22
+    svg = f'''<svg width="{OW}" height="{OH}" viewBox="0 0 {OW} {OH}" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter id="ws" x="-10%" y="-10%" width="120%" height="130%">
+<feDropShadow dx="0" dy="22" stdDeviation="30" flood-color="#1C1B19" flood-opacity="{shadow_op}"/>
+</filter>
+<clipPath id="wc"><rect width="{W}" height="{H}" rx="14"/></clipPath>
+</defs>
+<g transform="translate({MX},{MY})">
+<rect width="{W}" height="{H}" rx="14" fill="{P["editor"]}" filter="url(#ws)"/>
+<g clip-path="url(#wc)">
+<rect width="{W}" height="{H}" fill="{P["editor"]}"/>
 <rect width="{W}" height="40" rx="12" fill="{P["chrome"]}"/><rect y="20" width="{W}" height="20" fill="{P["chrome"]}"/>
 <circle cx="26" cy="20" r="7" fill="#E11E4D"/><circle cx="50" cy="20" r="7" fill="#E4A900"/><circle cx="74" cy="20" r="7" fill="#3AA55D"/>
 {T(540, 25, [(f"vauxoo_sale — Vauxoo {name.capitalize()}", P["uidim"], n)], size=13, font=UI)}
@@ -105,6 +117,9 @@ def build(name, P):
 <rect y="{H-28}" width="{W}" height="28" fill="{P["status"]}"/>
 {T(16, H-9, [("⎇ main   ✓ prettier", P["statusfg"], n)], size=13, font=UI)}
 {T(960, H-9, [(f"Ln 10, Col 9   Python   Vauxoo {name.capitalize()}", P["statusfg"], n)], size=13, font=UI)}
+</g>
+<rect width="{W}" height="{H}" rx="14" fill="none" stroke="{P["divider"]}" stroke-width="1"/>
+</g>
 </svg>'''
     open(f"screenshot-{name}.svg", "w").write(svg)
     print(f"screenshot-{name}.svg")

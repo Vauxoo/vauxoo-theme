@@ -7,8 +7,8 @@
 <p align="center"><em>Let's Build Something Great</em></p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=vauxoo.vauxoo-theme"><img src="https://img.shields.io/visual-studio-marketplace/v/vauxoo.vauxoo-theme?color=AC0340&label=Marketplace" alt="Marketplace version"></a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=vauxoo.vauxoo-theme"><img src="https://img.shields.io/visual-studio-marketplace/i/vauxoo.vauxoo-theme?color=455A64&label=Installs" alt="Installs"></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=vauxoo.vauxoo-theme"><img src="https://vsmarketplacebadges.dev/version-short/vauxoo.vauxoo-theme.svg?label=Marketplace&color=AC0340" alt="Marketplace version"></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=vauxoo.vauxoo-theme"><img src="https://vsmarketplacebadges.dev/installs-short/vauxoo.vauxoo-theme.svg?color=455A64" alt="Installs"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-E4A900" alt="MIT license"></a>
 </p>
 
