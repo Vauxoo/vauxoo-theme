@@ -66,10 +66,44 @@ to Vauxoo. Screenshots are SVG renders generated from the exact theme tokens
 ## Warp terminal
 
 The same three palettes ship as [Warp](https://www.warp.dev) themes in
-[`warp/`](warp/). Install:
+[`warp/`](warp/), in two flavors each:
 
-```
-mkdir -p ~/.warp/themes && cp warp/*.yaml ~/.warp/themes/
+- `vauxoo-dark.yaml` / `vauxoo-light.yaml` / `vauxoo-vakyro.yaml` — colors only.
+- `vauxoo-*-vakyro.yaml` — same palettes **plus Vakyro**, the Vauxoo mascot,
+  as a subtle watermark in the terminal background (`*-bg.png`).
+
+### Install on macOS
+
+```sh
+git clone https://github.com/Vauxoo/vauxoo-theme
+mkdir -p ~/.warp/themes && cp vauxoo-theme/warp/*.yaml vauxoo-theme/warp/*.png ~/.warp/themes/
 ```
 
-Then in Warp: Settings → Appearance → Theme (or `Ctrl+Cmd+T`).
+### Install on Linux
+
+```sh
+git clone https://github.com/Vauxoo/vauxoo-theme
+mkdir -p ~/.local/share/warp-terminal/themes
+cp vauxoo-theme/warp/*.yaml vauxoo-theme/warp/*.png ~/.local/share/warp-terminal/themes/
+```
+
+### Install on Windows (PowerShell)
+
+```powershell
+git clone https://github.com/Vauxoo/vauxoo-theme
+New-Item -ItemType Directory -Force "$env:APPDATA\warp\Warp\data\themes" | Out-Null
+Copy-Item vauxoo-theme\warp\*.yaml, vauxoo-theme\warp\*.png "$env:APPDATA\warp\Warp\data\themes\"
+```
+
+Then in Warp: Settings → Appearance → Theme and pick any **Vauxoo** variant
+(the `· Vakyro` ones carry the mascot watermark). The background `.png` files
+must sit next to the `.yaml` files — the themes reference them by relative
+path.
+
+The colors-only trio is also submitted to the official Warp themes gallery:
+[warpdotdev/themes#170](https://github.com/warpdotdev/themes/pull/170).
+
+> Note for VSCode: install works the same on all three OSes from the
+> [Marketplace](https://marketplace.visualstudio.com/items?itemName=vauxoo.vauxoo-theme);
+> the theme picker is `Cmd+K Cmd+T` on macOS and `Ctrl+K Ctrl+T` on
+> Windows/Linux.
