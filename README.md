@@ -62,3 +62,14 @@ Dark**, **Vauxoo Light** or **Vauxoo Vakyro**.
 MIT — see [LICENSE](LICENSE). The Vauxoo name, logo and brand assets belong
 to Vauxoo. Screenshots are SVG renders generated from the exact theme tokens
 (`images/mockup.py`).
+
+## Warp terminal
+
+The same three palettes ship as [Warp](https://www.warp.dev) themes in
+[`warp/`](warp/). Install:
+
+```
+mkdir -p ~/.warp/themes && cp warp/*.yaml ~/.warp/themes/
+```
+
+Then in Warp: Settings → Appearance → Theme (or `Ctrl+Cmd+T`).

@@ -4,3 +4,4 @@
 images/*.svg
 images/mockup.py
 icon-src.svg
+warp/**
