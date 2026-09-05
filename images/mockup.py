@@ -34,6 +34,14 @@ VARIANTS = {
         FG="#E8E3EE", K="#BD8BE0", S="#F3C5D9", F="#82BCCE", C="#E9BE44",
         N="#F2D06B", COM="#7C7385",
     ),
+    "oro": dict(
+        chrome="#27282F", editor="#282C2F", divider="#393B49", accent="#E9BE44",
+        status="#E9BE44", statusfg="#282C2F", seltab="#282C2F", tabfg="#FFFFFF",
+        tabdim="#95999F", uifg="#DFE2E6", uidim="#98A0AB", selrow="#464D57",
+        selrowfg="#FFFFFF", linehl="#2E3236", ln="#5C6166", lnact="#E9BE44",
+        FG="#DFE2E6", K="#E9BE44", S="#82BCCE", F="#5498CC", C="#E0507A",
+        N="#8A6BB5", COM="#7A8288",
+    ),
 }
 
 

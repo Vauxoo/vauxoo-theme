@@ -37,6 +37,14 @@ surfaces and status bar, pink `#F3C5D9` cursor and highlights.
 
 ![Vauxoo Vakyro](images/screenshot-vakyro.png)
 
+## Vauxoo Oro
+
+Gold-primary variant built from the brand's **auxiliary Pantone set**: gold
+123C `#E9BE44` on the status bar, keywords and accents, reds 193C/206C for
+types and errors, blues 2995C/3105C, purple 2587C and grays 656C/538C.
+
+![Vauxoo Oro](images/screenshot-oro.png)
+
 ## Palette
 
 ![Vauxoo brand palette](images/palette.png)
